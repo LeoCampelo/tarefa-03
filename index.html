@@ -1,5 +1,24 @@
+<!--
+    Tag para definição do arquivo na linguagem HTML.
+-->
 <!DOCTYPE html>
+
+<!--
+    <html>:
+
+    Tag de abertura que dá início a todo código HTML da página.
+    Também define a língua na qual a página está escrita, neste caso Português - Brasil.
+-->
 <html lang="pt-BR">
+    <!-- 
+        <header>:
+
+        Responsável pela configuração geral da página e definição do charset que será carregado,
+        geralmente não possui conteúdo visível.
+
+        Contem algumas definições de estilização de elementos específicos
+        atravez da tag <style> e código CSS.
+    -->
     <head>
         <meta charset="utf-8">
         <title>Minha página</title>
@@ -15,7 +34,19 @@
             }
         </style>
     </head>
+
+    <!-- 
+        <body>:
+
+        Responsável pela maioria dos elementos da página, assim como seu conteúdo principal.
+    -->
     <body>
+        <!--
+            <header>:
+
+            Definição do cabeçalho da página, contém todo conteúdo superior, neste caso possui
+            títulos com diferentes tamnhos e alinhamentos.
+        -->
         <header>
             <h1 align="center">Título principal (H1) - Centralizado</h1>
             <h2 align="left">Subtítulo (H2) - Alinhado à Esquerda</h2>
@@ -25,6 +56,11 @@
             <h6>Nota (H6) - Alinhamento padrão</h6>
         </header>
 
+        <!--
+            <nav>:
+
+            Seção responsável por links e endereços de navegação para dentro ou fora da página.
+        -->
         <nav>
             <p>
                 <a href="#posts">Posts</a> |
@@ -33,12 +69,49 @@
             </p>
         </nav>
 
+        <!--
+            <section>:
+
+            Tag para definição de uma seção de conteúdos que estão relacionados a um mesmo tema.
+            Neste caso se trata de uma postagem, logo os demais conteúdos dentro dessa <section>
+            serão realcionados a posts. Por isso, também, a definição do id "posts".
+        -->
         <section id="posts">
+
+            <!--
+                <article>:
+
+                Tag para um conteúdo independente, neste caso no contexto da <section> "posts" uma
+                tag <article> seria para um elemento de postagem, logo, por isso a definição da class
+                "post".
+            -->
             <article class="post">
+                <!--
+                    <header>:
+
+                    Assim como no início do <body>, temos um <header>, porém, neste contexto, é definido
+                    como o título de uma postagem.
+                -->
                 <header>
                     <h2>"Meu blog - Primeiro post!"</h2>
                 </header>
 
+                <!--
+                    <p>:
+                    
+                    Tag para definição de parágrafos, que trará o conteúdo da postagem.
+
+                    Temos algumas tags para definição de estilos de fonte como:
+                    <strong>: Negrito
+                    <em>: Itálico
+                    <sub>: Textos posicionados um pouco abaixo da linha de base normal
+                    <sup>: Textos posicionados um pouco acima da linha de base normal
+
+                    Além da tag <span> que define uma ou mais palavras específicas dentro de um texto
+                    no qual queira aplicar algum comportamento específico que não esteja definido pelas
+                    demais tags anteriores, possibilitando o uso de CSS inline (em linha) para uma única
+                    ou mais palavras delimitadas pela tag de abertura e fechamento <span></span>
+                -->
                 <p>
                     Neste parágrafo temos um exemplo de <strong>negrito</strong>, <em>itálico</em>,
                     <span style="text-decoration: underline">sublinhado</span>, 
@@ -54,22 +127,50 @@
                 </p>
             </article>
 
+            <!--
+                <div>:
+
+                Se trata de um bloco genérico, usada para agrupar e organizar elementos. Nesse caso com a
+                definição de uma classe que está sendo implementada no trecho CSS <style> no elemento <head> 
+                para que tenha um estilo definido para essa classe.
+
+                &lt; = <
+                &gt; = >
+                Caso queira usar os caracteres "<" e ">" como texto, é necessário usar os elementos citados
+                acima para que o HTML não entenda como tags.
+            -->
             <div class="center">
                 Esse texto está centralizado (substituindo &lt;center&gt;)
             </div>
 
+            <!-- 
+                Mais um exemplo de utilização de CSS inline, porém para um parágrafo <p> inteiro.
+            -->
             <p style="text-align: justify">
-                Esse parágrafo está com alinhamento justificado. <br>
+                Esse parágrafo está com alinhamento justificado. <br> <!-- tag para quebra de linha -->
                 E a sequência do texto com quebra de linha após a tag &lt;br&gt;.
             </p>
         </section>
 
+        <!--
+            <aside>:
+
+            Elemento para seções laterais da página, contendo conteúdo relevante para página, mas sem
+            fazer parte do seu fluxo principal.
+        -->
         <aside id="lateral">
             <h3>Conteúdo Relacionado</h3>
             <p>Links, anúncios ou notas que não fazem parte do fluxo principal do artigo.</p>
         </aside>
     </body>
+
+    <!--
+        <footer>:
+
+        Último elemento da página, contem o rodapé.
+    -->
     <footer>
+        <!-- Definida uma class para estilizar o texto do rodapé -->
         <p class="footer">© 2025 – Exemplo didático de HTML da Aula</p>
     </footer>
 </html>
